@@ -1,0 +1,28 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_orange"
+    },
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [0,-30,30],
+            "translation": [-3,1,5],
+            "scale": [0.5,0.5,0.5]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [0,-30,-30],
+            "translation": [-2,1,5],
+            "scale": [0.5,0.5,0.5]
+        },
+        "firstperson_righthand": {
+            "rotation": [5,0,40],
+            "translation": [0.2,-3,-3],
+            "scale": [0.3,0.3,0.3]
+        },
+        "firstperson_lefthand": {
+            "rotation": [5,0,-40],
+            "translation": [0.2,-3,-3],
+            "scale": [0.3,0.3,0.3]
+        }
+    }
+}

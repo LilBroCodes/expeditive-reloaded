@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "expeditive_reloaded:bamboo_flute"
+    },
+    "title": {
+      "translate": "expeditive_reloaded.advancements.root.title"
+    },
+    "description": {
+      "translate": "expeditive_reloaded.advancements.root.description"
+    },
+    "background": "expeditive_reloaded:textures/gui/advancements/backgrounds/expeditive.png",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": {}
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tick"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

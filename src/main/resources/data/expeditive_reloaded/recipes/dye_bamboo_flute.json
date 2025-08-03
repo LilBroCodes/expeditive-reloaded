@@ -1,0 +1,17 @@
+{
+  "type": "expeditive_reloaded:dyable_shapeless",
+  "group": "custom",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "expeditive_reloaded:bamboo_flute"
+    },
+    {
+      "tag": "expeditive_reloaded:dyes_exclusive"
+    }
+  ],
+  "result": {
+    "item": "expeditive_reloaded:bamboo_flute",
+    "count": 1
+  }
+}

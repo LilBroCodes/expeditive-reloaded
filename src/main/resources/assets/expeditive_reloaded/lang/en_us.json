@@ -1,0 +1,23 @@
+{
+  "item.expeditive_reloaded.strider_boots": "Strider Boots",
+  "item.expeditive_reloaded.striders_foot": "Strider's Foot",
+  "item.expeditive_reloaded.bamboo_flute": "Bamboo Flute",
+  "itemTooltip.expeditive_reloaded.strider_boots_l0": "Lets the user walk on",
+  "itemTooltip.expeditive_reloaded.strider_boots_l1": "lava and magma safely",
+  "itemGroup.expeditive_reloaded": "Expeditive Reloaded",
+  "advancement.expeditive_reloaded.strider_approved.title": "Strider Approved",
+  "advancement.expeditive_reloaded.strider_approved.description": "Stand on lava with Strider Boots equipped",
+  "advancement.expeditive_reloaded.beautiful_melody.title": "A Beautiful Melody",
+  "advancement.expeditive_reloaded.beautiful_melody.description": "Play every type of Bamboo Flute at least once",
+  "expeditive_reloaded.advancements.root.title": "Expeditive Reloaded",
+  "expeditive_reloaded.advancements.root.description": "Advancements for Expeditive Reloaded",
+  "expeditive_reloaded.bamboo_flute.tooltip_all": "Controls all wolves.",
+  "expeditive_reloaded.bamboo_flute.tooltip_color": "Controls all wolves with a %s collar.",
+  "expeditive_reloaded.bamboo_flute.tutorial.show": "Hold <%s> to show usage.",
+  "expeditive_reloaded.bamboo_flute.tutorial.header": "How to use:",
+  "expeditive_reloaded.bamboo_flute.tutorial.note_pitch": "- The pitch of the played note depends on how high you are looking.",
+  "expeditive_reloaded.bamboo_flute.tutorial.look_down": "- Look fully down to call all controlled wolves to you.",
+  "expeditive_reloaded.bamboo_flute.tutorial.look_up": "- Look fully up to make all controlled wolves sit/stand.",
+  "expeditive_reloaded.bamboo_flute.tutorial.look_at_controlled_wolf": "- Look at a controlled wolf to toggle its sitting state.",
+  "expeditive_reloaded.bamboo_flute.tutorial.look_at_other": "- Look at any entity to make all controlled wolves attack it."
+}

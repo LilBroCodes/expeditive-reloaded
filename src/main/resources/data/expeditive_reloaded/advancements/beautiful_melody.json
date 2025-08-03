@@ -1,0 +1,107 @@
+{
+  "display": {
+    "icon": {
+      "item": "expeditive_reloaded:bamboo_flute"
+    },
+    "title": {
+      "translate": "advancement.expeditive_reloaded.beautiful_melody.title"
+    },
+    "description": {
+      "translate": "advancement.expeditive_reloaded.beautiful_melody.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "expeditive_reloaded:root",
+  "criteria": {
+    "play_white": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "white" }
+    },
+    "play_orange": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "orange" }
+    },
+    "play_magenta": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "magenta" }
+    },
+    "play_light_blue": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "light_blue" }
+    },
+    "play_yellow": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "yellow" }
+    },
+    "play_lime": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "lime" }
+    },
+    "play_pink": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "pink" }
+    },
+    "play_gray": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "gray" }
+    },
+    "play_light_gray": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "light_gray" }
+    },
+    "play_cyan": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "cyan" }
+    },
+    "play_purple": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "purple" }
+    },
+    "play_blue": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "blue" }
+    },
+    "play_brown": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "brown" }
+    },
+    "play_green": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "green" }
+    },
+    "play_red": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "red" }
+    },
+    "play_black": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": { "color": "black" }
+    },
+    "play_undyed": {
+      "trigger": "expeditive_reloaded:played_flute",
+      "conditions": {}
+    }
+  },
+  "requirements": [
+    ["play_white"],
+    ["play_orange"],
+    ["play_magenta"],
+    ["play_light_blue"],
+    ["play_yellow"],
+    ["play_lime"],
+    ["play_pink"],
+    ["play_gray"],
+    ["play_light_gray"],
+    ["play_cyan"],
+    ["play_purple"],
+    ["play_blue"],
+    ["play_brown"],
+    ["play_green"],
+    ["play_red"],
+    ["play_black"],
+    ["play_undyed"]
+  ],
+  "sends_telemetry_event": true
+}

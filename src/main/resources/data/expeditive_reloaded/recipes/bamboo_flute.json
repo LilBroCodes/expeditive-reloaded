@@ -1,0 +1,18 @@
+{
+  "type": "expeditive_reloaded:dyable_shaped",
+  "group": "custom",
+  "category": "misc",
+  "pattern": [
+    " SD",
+    "BBB"
+  ],
+  "key": {
+    "S": { "item": "minecraft:string" },
+    "B": { "item": "minecraft:bamboo" },
+    "D": { "tag": "expeditive_reloaded:dyes_inclusive" }
+  },
+  "result": {
+    "item": "expeditive_reloaded:bamboo_flute",
+    "count": 1
+  }
+}

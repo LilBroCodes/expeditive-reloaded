@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "expeditive_reloaded",
+  "version": "${version}",
+  "name": "Expeditive Reloaded",
+  "description": "Higher quality remake of my first mod called \"Expeditive\"",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/expeditive_reloaded/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "org.lilbrocodes.expeditive_reloaded.client.ExpeditiveReloadedClient"
+    ],
+    "main": [
+      "org.lilbrocodes.expeditive_reloaded.ExpeditiveReloaded"
+    ]
+  },
+  "mixins": [
+    "expeditive_reloaded.mixins.json"
+  ],
+  "depends": {
+    "composer_reloaded": ">=${composer_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

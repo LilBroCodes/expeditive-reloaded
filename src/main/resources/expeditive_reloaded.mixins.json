@@ -1,0 +1,25 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.lilbrocodes.expeditive_reloaded.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "impl.bamboo_flute.ItemStackMixin",
+    "impl.strider_boots.EntityMixin",
+    "impl.strider_boots.ItemStackMixin",
+    "impl.strider_boots.LandPathNodeMakerMixin",
+    "impl.strider_boots.LivingEntityMixin",
+    "impl.strider_boots.PiglinEntityMixin",
+    "impl.strider_boots.ZombifiedPiglinEntityMixin"
+  ],
+  "client": [
+    "impl.bamboo_flute.InGameHudMixin",
+    "impl.strider_boots.ClientPlayerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

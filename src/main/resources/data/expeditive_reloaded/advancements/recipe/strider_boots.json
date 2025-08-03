@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "expeditive_reloaded:striders_foot"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "expeditive_reloaded:strider_boots"
+    ]
+  },
+  "parent": "minecraft:recipes/root"
+}

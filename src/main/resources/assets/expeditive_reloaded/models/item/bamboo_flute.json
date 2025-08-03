@@ -1,0 +1,268 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "expeditive_reloaded:item/bamboo_flute"
+    },
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [0,180,0],
+            "translation": [-1.5,2.7,1],
+            "scale": [0.55,0.55,0.55]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [0,0,0],
+            "translation": [-1.5,2.7,1],
+            "scale": [0.55,0.55,0.55]
+        },
+        "firstperson_righthand": {
+            "rotation": [0,-90,25],
+            "translation": [1.13,1,1.13],
+            "scale": [0.68,0.68,0.68]
+        },
+        "firstperson_lefthand": {
+            "rotation": [0,90,-25],
+            "translation": [1.13,1,1.13],
+            "scale": [0.68,0.68,0.68]
+        }
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "color": 0.0,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_white"
+        },
+        {
+            "predicate": {
+                "color": 0.0625,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_orange"
+        },
+        {
+            "predicate": {
+                "color": 0.125,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_magenta"
+        },
+        {
+            "predicate": {
+                "color": 0.1875,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_light_blue"
+        },
+        {
+            "predicate": {
+                "color": 0.25,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_yellow"
+        },
+        {
+            "predicate": {
+                "color": 0.3125,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_lime"
+        },
+        {
+            "predicate": {
+                "color": 0.375,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_pink"
+        },
+        {
+            "predicate": {
+                "color": 0.4375,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_gray"
+        },
+        {
+            "predicate": {
+                "color": 0.5,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_light_gray"
+        },
+        {
+            "predicate": {
+                "color": 0.5625,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_cyan"
+        },
+        {
+            "predicate": {
+                "color": 0.625,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_purple"
+        },
+        {
+            "predicate": {
+                "color": 0.6875,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_blue"
+        },
+        {
+            "predicate": {
+                "color": 0.75,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_brown"
+        },
+        {
+            "predicate": {
+                "color": 0.8125,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_green"
+        },
+        {
+            "predicate": {
+                "color": 0.875,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_red"
+        },
+        {
+            "predicate": {
+                "color": 0.9375,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute/bamboo_flute_black"
+        },
+        {
+            "predicate": {
+                "color": 0.9999,
+                "playing": 0.0
+            },
+            "model": "expeditive_reloaded:item/bamboo_flute"
+        },
+        {
+            "predicate": {
+                "color": 0.0,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_white"
+        },
+        {
+            "predicate": {
+                "color": 0.0625,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_orange"
+        },
+        {
+            "predicate": {
+                "color": 0.125,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_magenta"
+        },
+        {
+            "predicate": {
+                "color": 0.1875,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_light_blue"
+        },
+        {
+            "predicate": {
+                "color": 0.25,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_yellow"
+        },
+        {
+            "predicate": {
+                "color": 0.3125,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_lime"
+        },
+        {
+            "predicate": {
+                "color": 0.375,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_pink"
+        },
+        {
+            "predicate": {
+                "color": 0.4375,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_gray"
+        },
+        {
+            "predicate": {
+                "color": 0.5,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_light_gray"
+        },
+        {
+            "predicate": {
+                "color": 0.5625,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_cyan"
+        },
+        {
+            "predicate": {
+                "color": 0.625,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_purple"
+        },
+        {
+            "predicate": {
+                "color": 0.6875,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_blue"
+        },
+        {
+            "predicate": {
+                "color": 0.75,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_brown"
+        },
+        {
+            "predicate": {
+                "color": 0.8125,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_green"
+        },
+        {
+            "predicate": {
+                "color": 0.875,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_red"
+        },
+        {
+            "predicate": {
+                "color": 0.9375,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute_black"
+        },
+        {
+            "predicate": {
+                "color": 0.9999,
+                "playing": 1.0
+            },
+            "model": "expeditive_reloaded:item/playing_bamboo_flute"
+        }
+    ]
+}

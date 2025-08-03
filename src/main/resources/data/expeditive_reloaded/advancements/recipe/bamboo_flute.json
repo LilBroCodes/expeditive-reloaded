@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bamboo"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "expeditive_reloaded:bamboo_flute"
+    ]
+  },
+  "parent": "minecraft:recipes/root"
+}
