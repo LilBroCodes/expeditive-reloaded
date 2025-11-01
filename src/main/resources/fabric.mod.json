@@ -8,7 +8,7 @@
   "contact": {},
   "license": "All-Rights-Reserved",
   "icon": "assets/expeditive_reloaded/icon.png",
-  "environment": "client",
+  "environment": "*",
   "entrypoints": {
     "client": [
       "org.lilbrocodes.expeditive_reloaded.client.ExpeditiveReloadedClient"

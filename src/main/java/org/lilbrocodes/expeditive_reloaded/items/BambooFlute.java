@@ -3,7 +3,6 @@ package org.lilbrocodes.expeditive_reloaded.items;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -20,7 +19,6 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
-import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.util.*;
 import net.minecraft.util.math.Box;
@@ -34,7 +32,6 @@ import org.lilbrocodes.expeditive_reloaded.util.Misc;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.UUID;
 
 import static org.lilbrocodes.expeditive_reloaded.util.Misc.distanceTo2D;
@@ -207,7 +204,7 @@ public class BambooFlute extends Item {
             if (user instanceof ServerPlayerEntity serverPlayer) {
                 ReloadedAdvancements.Criterion.PLAYED_FLUTE.trigger(serverPlayer, getColor(itemStack));
             }
-        };
+        }
         playSound(world, user, SoundEvents.BLOCK_NOTE_BLOCK_FLUTE.value(), pitch);
 
         return TypedActionResult.consume(itemStack);
@@ -227,8 +224,6 @@ public class BambooFlute extends Item {
         DyeColor color = getColor(stack);
 
         if (color != null) {
-            tooltip.add(Text.translatable("itemGroup.expeditive_reloaded").formatted(Formatting.BLUE));
-
             tooltip.add(Text.translatable(
                     "expeditive_reloaded.bamboo_flute.tooltip_color",
                     Misc.getColoredDyeColorName(color)

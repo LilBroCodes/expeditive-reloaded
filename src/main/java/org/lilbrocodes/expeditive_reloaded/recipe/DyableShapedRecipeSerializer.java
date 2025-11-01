@@ -17,6 +17,7 @@ import net.minecraft.util.collection.DefaultedList;
 import java.util.Map;
 import java.util.Set;
 
+@SuppressWarnings("StatementWithEmptyBody")
 public class DyableShapedRecipeSerializer implements RecipeSerializer<DyableShapedRecipe> {
     static DefaultedList<Ingredient> createPatternMatrix(String[] pattern, Map<String, Ingredient> symbols, int width, int height) {
         DefaultedList<Ingredient> defaultedList = DefaultedList.ofSize(width * height, Ingredient.EMPTY);
@@ -26,7 +27,7 @@ public class DyableShapedRecipeSerializer implements RecipeSerializer<DyableShap
         for(int i = 0; i < pattern.length; ++i) {
             for(int j = 0; j < pattern[i].length(); ++j) {
                 String string = pattern[i].substring(j, j + 1);
-                Ingredient ingredient = (Ingredient)symbols.get(string);
+                Ingredient ingredient = symbols.get(string);
                 if (ingredient == null) {
                     throw new JsonSyntaxException("Pattern references symbol '" + string + "' but it's not defined in the key");
                 }
@@ -81,7 +82,9 @@ public class DyableShapedRecipeSerializer implements RecipeSerializer<DyableShap
 
     private static int findFirstSymbol(String line) {
         int i;
+
         for(i = 0; i < line.length() && line.charAt(i) == ' '; ++i) {
+
         }
 
         return i;
@@ -89,7 +92,9 @@ public class DyableShapedRecipeSerializer implements RecipeSerializer<DyableShap
 
     private static int findLastSymbol(String pattern) {
         int i;
+
         for(i = pattern.length() - 1; i >= 0 && pattern.charAt(i) == ' '; --i) {
+
         }
 
         return i;
@@ -123,15 +128,15 @@ public class DyableShapedRecipeSerializer implements RecipeSerializer<DyableShap
         Map<String, Ingredient> map = Maps.newHashMap();
 
         for(Map.Entry<String, JsonElement> entry : json.entrySet()) {
-            if (((String)entry.getKey()).length() != 1) {
-                throw new JsonSyntaxException("Invalid key entry: '" + (String)entry.getKey() + "' is an invalid symbol (must be 1 character only).");
+            if (entry.getKey().length() != 1) {
+                throw new JsonSyntaxException("Invalid key entry: '" + entry.getKey() + "' is an invalid symbol (must be 1 character only).");
             }
 
             if (" ".equals(entry.getKey())) {
                 throw new JsonSyntaxException("Invalid key entry: ' ' is a reserved symbol.");
             }
 
-            map.put((String)entry.getKey(), Ingredient.fromJson((JsonElement)entry.getValue(), false));
+            map.put(entry.getKey(), Ingredient.fromJson(entry.getValue(), false));
         }
 
         map.put(" ", Ingredient.EMPTY);
@@ -164,9 +169,7 @@ public class DyableShapedRecipeSerializer implements RecipeSerializer<DyableShap
         int height = buf.readVarInt();
 
         DefaultedList<Ingredient> inputs = DefaultedList.ofSize(width * height, Ingredient.EMPTY);
-        for (int i = 0; i < inputs.size(); i++) {
-            inputs.set(i, Ingredient.fromPacket(buf));
-        }
+        inputs.replaceAll(ignored -> Ingredient.fromPacket(buf));
 
         ItemStack output = buf.readItemStack();
         return new DyableShapedRecipe(id, group, category, width, height, inputs, output);

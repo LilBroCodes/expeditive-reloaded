@@ -49,7 +49,7 @@ public abstract class LivingEntityMixin extends Entity {
                 state.getLevel() > 3 &&
                 fallDistance < getSafeFallDistance() &&
                 !headFluidState.isOf(Fluids.LAVA));
-    };
+    }
 
     @Inject(method = "tickMovement", at = @At("HEAD"))
     private void expeditive$tickLavaWalking(CallbackInfo ci) {

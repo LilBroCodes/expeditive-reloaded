@@ -20,6 +20,7 @@ public class ReloadedRecipes {
                     new Identifier("expeditive_reloaded", "dyable_shapeless"),
                     new DyableShapelessRecipeSerializer());
 
+    @SuppressWarnings("EmptyMethod")
     public static void initialize() {
 
     }

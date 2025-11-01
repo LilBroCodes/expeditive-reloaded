@@ -15,6 +15,7 @@ import org.lilbrocodes.expeditive_reloaded.ReloadedRecipes;
 import org.lilbrocodes.expeditive_reloaded.items.BambooFlute;
 
 
+@SuppressWarnings("ClassCanBeRecord")
 public class DyableShapedRecipe implements CraftingRecipe {
     final Identifier id;
     final String group;
@@ -51,7 +52,7 @@ public class DyableShapedRecipe implements CraftingRecipe {
 
     private boolean matchesAt(RecipeInputInventory inv, int offsetX, int offsetY, boolean flipHorizontally) {
         int invWidth = inv.getWidth();
-        int invHeight = inv.getHeight();
+        inv.getHeight();
 
         for (int patternY = 0; patternY < this.height; patternY++) {
             for (int patternX = 0; patternX < this.width; patternX++) {

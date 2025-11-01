@@ -4,7 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 
 public class ExpeditiveReloaded implements ModInitializer {
-    public static String MOD_ID = "expeditive_reloaded";
+    public static final String MOD_ID = "expeditive_reloaded";
 
     @Override
     public void onInitialize() {

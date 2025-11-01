@@ -10,7 +10,10 @@ public class ReloadedAdvancements {
     public static class Criterion {
         public static final PlayedFluteCriterion PLAYED_FLUTE = Criteria.register(new PlayedFluteCriterion());
 
-        public static void initialize() {}
+        @SuppressWarnings("EmptyMethod")
+        public static void initialize() {
+
+        }
     }
 
     public static void initialize() {

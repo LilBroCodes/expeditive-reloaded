@@ -12,6 +12,7 @@ import net.minecraft.world.World;
 import org.lilbrocodes.expeditive_reloaded.ReloadedRecipes;
 import org.lilbrocodes.expeditive_reloaded.items.BambooFlute;
 
+@SuppressWarnings("ClassCanBeRecord")
 public class DyableShapelessRecipe implements CraftingRecipe {
     private final Identifier id;
     final String group;

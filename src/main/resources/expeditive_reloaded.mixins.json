@@ -1,20 +1,21 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "org.lilbrocodes.expeditive_reloaded.mixin",
+  "package": "org.lilbrocodes.expeditive_reloaded.mixin.impl",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "impl.bamboo_flute.ItemStackMixin",
-    "impl.strider_boots.EntityMixin",
-    "impl.strider_boots.ItemStackMixin",
-    "impl.strider_boots.LandPathNodeMakerMixin",
-    "impl.strider_boots.LivingEntityMixin",
-    "impl.strider_boots.PiglinEntityMixin",
-    "impl.strider_boots.ZombifiedPiglinEntityMixin"
+    "bamboo_flute.ItemStackMixin",
+    "bamboo_flute.WolfEntityMixin",
+    "strider_boots.EntityMixin",
+    "strider_boots.ItemStackMixin",
+    "strider_boots.LandPathNodeMakerMixin",
+    "strider_boots.LivingEntityMixin",
+    "strider_boots.PiglinEntityMixin",
+    "strider_boots.ZombifiedPiglinEntityMixin"
   ],
   "client": [
-    "impl.bamboo_flute.InGameHudMixin",
-    "impl.strider_boots.ClientPlayerEntityMixin"
+    "bamboo_flute.InGameHudMixin",
+    "strider_boots.ClientPlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

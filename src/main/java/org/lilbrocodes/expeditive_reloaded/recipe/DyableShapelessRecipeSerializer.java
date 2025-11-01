@@ -8,7 +8,6 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.ShapedRecipe;
-import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.recipe.book.CraftingRecipeCategory;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.JsonHelper;
@@ -17,7 +16,7 @@ import net.minecraft.util.collection.DefaultedList;
 public class DyableShapelessRecipeSerializer implements RecipeSerializer<DyableShapelessRecipe> {
     public DyableShapelessRecipe read(Identifier identifier, JsonObject jsonObject) {
         String string = JsonHelper.getString(jsonObject, "group", "");
-        CraftingRecipeCategory craftingRecipeCategory = (CraftingRecipeCategory)CraftingRecipeCategory.CODEC
+        CraftingRecipeCategory craftingRecipeCategory = CraftingRecipeCategory.CODEC
                 .byId(JsonHelper.getString(jsonObject, "category", null), CraftingRecipeCategory.MISC);
         DefaultedList<Ingredient> defaultedList = getIngredients(JsonHelper.getArray(jsonObject, "ingredients"));
         if (defaultedList.isEmpty()) {
@@ -49,9 +48,7 @@ public class DyableShapelessRecipeSerializer implements RecipeSerializer<DyableS
         int i = packetByteBuf.readVarInt();
         DefaultedList<Ingredient> defaultedList = DefaultedList.ofSize(i, Ingredient.EMPTY);
 
-        for (int j = 0; j < defaultedList.size(); j++) {
-            defaultedList.set(j, Ingredient.fromPacket(packetByteBuf));
-        }
+        defaultedList.replaceAll(ignored -> Ingredient.fromPacket(packetByteBuf));
 
         ItemStack itemStack = packetByteBuf.readItemStack();
         return new DyableShapelessRecipe(identifier, string, craftingRecipeCategory, itemStack, defaultedList);

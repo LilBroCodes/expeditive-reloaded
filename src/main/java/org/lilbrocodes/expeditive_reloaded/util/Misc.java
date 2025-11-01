@@ -11,7 +11,7 @@ import net.minecraft.util.math.Vec3d;
 import org.lilbrocodes.composer_reloaded.api.targeting.TargetingContext;
 
 public class Misc {
-    public static ContextBuilder PACIFIST_SETTINGS = player ->
+    public static final ContextBuilder PACIFIST_SETTINGS = player ->
             TargetingContext.builder(player)
                     .targetDead(false)
                     .targetTamed(true)
