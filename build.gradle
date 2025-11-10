@@ -18,7 +18,7 @@ repositories {
         url = "https://maven.ladysnake.org/releases"
     }
     maven {
-        name "FzzyMaven [Composer   ]"
+        name "FzzyMaven [Composer]"
         url "https://maven.fzzyhmstrs.me/"
     }
     maven {
