@@ -11,7 +11,7 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.GameMode;
-import org.lilbrocodes.composer_reloaded.api.targeting.Targeting;
+import com.codex.composer.api.v1.targeting.Targeting;
 import org.lilbrocodes.expeditive_reloaded.items.BambooFlute;
 import org.lilbrocodes.expeditive_reloaded.util.Misc;
 import org.spongepowered.asm.mixin.Final;

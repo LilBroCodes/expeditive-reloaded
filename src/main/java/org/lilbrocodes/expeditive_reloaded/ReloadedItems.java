@@ -1,6 +1,6 @@
 package org.lilbrocodes.expeditive_reloaded;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import com.codex.composer.api.v1.item.settings.ComposerItemSettings;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
@@ -9,8 +9,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
-import org.lilbrocodes.composer_reloaded.api.registry.lazy.DeferredItemGroupRegistry;
-import org.lilbrocodes.composer_reloaded.api.registry.lazy.DeferredItemRegistry;
+import com.codex.composer.api.v1.registry.lazy.DeferredItemGroupRegistry;
+import com.codex.composer.api.v1.registry.lazy.DeferredItemRegistry;
 import org.lilbrocodes.expeditive_reloaded.items.StriderBoots;
 import org.lilbrocodes.expeditive_reloaded.items.StriderBootsItem;
 import org.lilbrocodes.expeditive_reloaded.items.StridersFoot;
@@ -28,10 +28,27 @@ public class ReloadedItems {
 
     private static final ArmorMaterial STRIDER_BOOTS_M = new StriderBoots();
 
-    public static final Item STRIDER_BOOTS = ITEMS.register("strider_boots", new StriderBootsItem(STRIDER_BOOTS_M, new FabricItemSettings()));
-    public static final Item STRIDERS_FOOT = ITEMS.register("striders_foot", new StridersFoot(new FabricItemSettings().maxCount(1)));
+    public static final Item STRIDER_BOOTS =
+            ITEMS.register(
+                    "strider_boots",
+                    s -> new StriderBootsItem(STRIDER_BOOTS_M, s),
+                    new ComposerItemSettings()
+            );
 
-    public static final Item BAMBOO_FLUTE = ITEMS.register("bamboo_flute", new BambooFlute());
+    public static final Item STRIDERS_FOOT =
+            ITEMS.register(
+                    "striders_foot",
+                    StridersFoot::new,
+                    new ComposerItemSettings().maxCount(1)
+            );
+
+    public static final Item BAMBOO_FLUTE =
+            ITEMS.register(
+                    "bamboo_flute",
+                    BambooFlute::new,
+                    new ComposerItemSettings()
+            );
+
 
     public static void initialize() {
         ITEMS.finalizeRegistration();

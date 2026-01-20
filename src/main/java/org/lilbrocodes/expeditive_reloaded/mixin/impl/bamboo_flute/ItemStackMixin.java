@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ItemStack.class)
 public class ItemStackMixin {
-    @Inject(method = "fromNbt", at = @At("RETURN"), cancellable = true)
+    @Inject(method = "fromNbt", at = @At(value = "RETURN", ordinal = 1), cancellable = true)
     private static void expeditive$dataFixFlutes(NbtCompound nbt, CallbackInfoReturnable<ItemStack> cir) {
         ItemStack stack = cir.getReturnValue();
 

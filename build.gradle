@@ -1,6 +1,6 @@
 //file:noinspection GrUnresolvedAccess
 plugins {
-    id 'fabric-loom' version '1.10.2'
+    id 'fabric-loom' version '1.14.10'
     id 'com.modrinth.minotaur' version '2.+'
     id 'maven-publish'
 }
@@ -23,7 +23,11 @@ repositories {
     }
     maven {
         name = "Composer Maven"
-        url "https://dl.cloudsmith.io/public/lilbrocodes/composer-reloaded/maven/"
+        url = "https://dl.cloudsmith.io/public/project-codex/composer/maven/"
+    }
+    maven {
+        name "Constructive"
+        url "https://dl.cloudsmith.io/public/lilbrocodes/constructive/maven/"
     }
 }
 
@@ -33,7 +37,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:$loader_version"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:$fabric_version"
-    modImplementation "org.lilbrocodes:composer-reloaded:$composer_version"
+    modImplementation "com.codex:composer:$composer_version+mc$minecraft_version"
 }
 
 processResources {
@@ -72,14 +76,13 @@ jar {
 }
 
 def getLastGitCommitMessage() {
-    def stdout = new ByteArrayOutputStream()
-    exec {
-        commandLine 'git', 'log', '-1', '--pretty=%B'
-        standardOutput = stdout
+    def result = providers.exec {
+        commandLine("git", "log", "-1", "--pretty=%B")
         workingDir = project.rootDir
-        ignoreExitValue true
+        ignoreExitValue = true
     }
-    return stdout.toString().trim()
+
+    return result.standardOutput.asText.get().trim()
 }
 
 modrinth {

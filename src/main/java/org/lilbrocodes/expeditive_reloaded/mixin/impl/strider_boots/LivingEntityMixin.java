@@ -1,6 +1,8 @@
 package org.lilbrocodes.expeditive_reloaded.mixin.impl.strider_boots;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
+import net.minecraft.advancement.Advancement;
+import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.Entity;
@@ -14,6 +16,7 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
@@ -27,7 +30,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static org.lilbrocodes.composer_reloaded.api.util.AdvancementManager.grantAdvancement;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity {
@@ -62,7 +64,7 @@ public abstract class LivingEntityMixin extends Entity {
                     }
                     if (lavaWalkingTicks != -1) lavaWalkingTicks++;
                     if (lavaWalkingTicks >= 60) {
-                        grantAdvancement(serverPlayer, ReloadedAdvancements.STRIDER_APPROVED);
+                        grantAdvancement(serverPlayer);
                         lavaWalkingTicks = -1;
                     }
                 } else if (lavaWalkingTicks != -1) lavaWalkingTicks = 0;
@@ -101,6 +103,23 @@ public abstract class LivingEntityMixin extends Entity {
             } else {
                 LivingEntity self = (LivingEntity) (Object) this;
                 if (!(self instanceof PlayerEntity)) this.setVelocity(this.getVelocity().multiply(0.5F).add(0.0F, 0.05, 0.0F));
+            }
+        }
+    }
+
+    @Unique
+    private static void grantAdvancement(ServerPlayerEntity player) {
+        MinecraftServer server = player.getServer();
+        if (server == null) return;
+
+        Advancement advancement = server.getAdvancementLoader().get(ReloadedAdvancements.STRIDER_APPROVED);
+        if (advancement == null) return;
+
+        AdvancementProgress progress = player.getAdvancementTracker().getProgress(advancement);
+
+        if (!progress.isDone()) {
+            for (String criterion : progress.getUnobtainedCriteria()) {
+                player.getAdvancementTracker().grantCriterion(advancement, criterion);
             }
         }
     }

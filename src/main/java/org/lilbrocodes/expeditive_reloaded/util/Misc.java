@@ -1,5 +1,6 @@
 package org.lilbrocodes.expeditive_reloaded.util;
 
+import com.codex.composer.api.v1.targeting.TargetingContextBuilder;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.MutableText;
@@ -8,11 +9,11 @@ import net.minecraft.text.Text;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.Vec3d;
-import org.lilbrocodes.composer_reloaded.api.targeting.TargetingContext;
+import com.codex.composer.api.v1.targeting.TargetingContext;
 
 public class Misc {
     public static final ContextBuilder PACIFIST_SETTINGS = player ->
-            TargetingContext.builder(player)
+            TargetingContextBuilder.create(player)
                     .targetDead(false)
                     .targetTamed(true)
                     .targetNonLiving(true)

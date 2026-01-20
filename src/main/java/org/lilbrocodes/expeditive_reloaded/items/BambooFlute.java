@@ -1,5 +1,6 @@
 package org.lilbrocodes.expeditive_reloaded.items;
 
+import com.codex.composer.api.v1.item.settings.ComposerItemSettings;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
@@ -25,7 +26,7 @@ import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
-import org.lilbrocodes.composer_reloaded.api.targeting.Targeting;
+import com.codex.composer.api.v1.targeting.Targeting;
 import org.lilbrocodes.expeditive_reloaded.ReloadedAdvancements;
 import org.lilbrocodes.expeditive_reloaded.mixin.accessor.WolfEntityMethodAccessor;
 import org.lilbrocodes.expeditive_reloaded.util.Misc;
@@ -38,8 +39,8 @@ import static org.lilbrocodes.expeditive_reloaded.util.Misc.distanceTo2D;
 
 public class BambooFlute extends Item {
 
-    public BambooFlute() {
-        super(new FabricItemSettings().maxCount(1));
+    public BambooFlute(ComposerItemSettings settings) {
+        super(settings.maxCount(1));
     }
 
     public void playSound(World world, Entity entity, SoundEvent soundEvent, float p) {
