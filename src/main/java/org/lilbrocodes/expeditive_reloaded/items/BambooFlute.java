@@ -1,7 +1,7 @@
 package org.lilbrocodes.expeditive_reloaded.items;
 
 import com.codex.composer.api.v1.item.settings.ComposerItemSettings;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import com.codex.composer.api.v1.targeting.Targeting;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
@@ -26,7 +26,6 @@ import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
-import com.codex.composer.api.v1.targeting.Targeting;
 import org.lilbrocodes.expeditive_reloaded.ReloadedAdvancements;
 import org.lilbrocodes.expeditive_reloaded.mixin.accessor.WolfEntityMethodAccessor;
 import org.lilbrocodes.expeditive_reloaded.util.Misc;
